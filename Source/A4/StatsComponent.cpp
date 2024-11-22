@@ -46,10 +46,8 @@ void UStatsComponent::AddXP(float xpAmount)
 		currentXP -= 100.0f;
 		level += 1;
 		UpdateStats(50.0f, 2.0f, 50.0f);
-		OnLevelUpDelegate.Broadcast();
 	}
 
-	OnXPChangeDelegate.Broadcast();
 }
 
 void UStatsComponent::UpdateStats(float cleaningRangeChange, float firepowerPerSecondChange, float maxFirepowerChange)

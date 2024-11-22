@@ -6,9 +6,6 @@
 #include "Components/ActorComponent.h"
 #include "StatsComponent.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnLevelUp);
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnXPChange);
-
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class A4_API UStatsComponent : public UActorComponent
@@ -56,12 +53,6 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void AddXP(float xpAmount = 0);
-
-	UPROPERTY(BlueprintCallable, BlueprintAssignable)
-	FOnLevelUp OnLevelUpDelegate;
-
-	UPROPERTY(BlueprintCallable, BlueprintAssignable)
-	FOnXPChange OnXPChangeDelegate;
 
 protected:
 
